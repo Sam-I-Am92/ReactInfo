@@ -4,6 +4,7 @@ import path from 'path';
 import cors from 'cors';
 import * as url from 'url';
 import statusRouter from './routers/statusRouter.js';
+import apiRouter from './routers/apiRouter.js';
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
@@ -20,8 +21,11 @@ app.use(bodyParser.json());
 // serve static files to browser
 app.use(express.static(path.join(__dirname, '../client/dist/')));
 
-// route all reqs for data to router file
+// test route
 app.use('/status', statusRouter);
+
+// all routes for api
+app.use('/api', apiRouter);
 
 // export app server
 export default app;

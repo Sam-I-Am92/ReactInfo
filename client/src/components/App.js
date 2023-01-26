@@ -1,15 +1,30 @@
 import React from 'react';
+import { 
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider, 
+  Route 
+} from 'react-router-dom';
 
-import DisplayTime from './DisplayTime.js';
-import classes from '../../dist/App.css';
+import Home from './Home/Home.js';
+import List from './List/List.js';
+import Details from './Details/Details.js';
 
-const App = (props) => {
+import RootLayout from '../Layouts/RootLayout.js';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={ <RootLayout /> }>
+      <Route index element={ <Home /> } />
+      <Route path="contributors" element={ <List /> } />
+      <Route path="details" element={ <Details /> } />
+    </Route>
+  )
+)
+
+const App = () => {
   return (
-    <div className={classes.App}>
-      <h1>Redux Boilerplate!!!</h1>
-      <hr />
-      <DisplayTime time={props.time} />
-    </div>
+    <RouterProvider router={router} />
   )
 }
 

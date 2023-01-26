@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
-
-import timeReducer from './timeReducer.js';
+import { listReducer } from './listReducer.js';
 
 export default combineReducers({
-  display: timeReducer
+  list: listReducer,
 });

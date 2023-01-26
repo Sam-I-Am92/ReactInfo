@@ -10,14 +10,7 @@ const root = createRoot(container);
 
 root.render(
   <Provider store={Store}>
-    <App time={Date.now()} />
+      <App />
   </Provider>
 )
-
-// ReactDOM.render(
-//   <Provider store={Store}>
-//     <App time={Date.now()}/>
-//   </Provider>,
-//   document.getElementById('root')
-// );
 

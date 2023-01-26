@@ -1,5 +1,5 @@
 {
-  "name": "reduxboilerplate",
+  "name": "reactapi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -31,7 +31,7 @@
       "<rootDir>/jest.setup.js"
     ]
   },
-  "author": "",
+  "author": "Parteek Sandhu",
   "license": "ISC",
   "type": "module",
   "dependencies": {
@@ -46,11 +46,12 @@
     "lowdb": "^3.0.0",
     "moment": "^2.29.3",
     "morgan": "^1.10.0",
+    "octokit": "^2.0.13",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
-    "react-router": "^6.3.0",
-    "react-router-dom": "^6.3.0",
+    "react-router": "^6.4.0",
+    "react-router-dom": "^6.4.0",
     "redux": "^4.2.0",
     "redux-thunk": "^2.4.1",
     "sqlite": "^4.1.1",

@@ -4,7 +4,6 @@ const SRC_DIR = path.join(__dirname, '/client/src');
 const DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
-  // configure webpack
   mode: 'development',
   entry: `${SRC_DIR}/index.js`,
   output: {
@@ -13,12 +12,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // {
-      //   enforce: 'pre',
-      //   test: /\.(js|jsx)$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader'
-      // },
       {
         test: /\.(png|jpe?g)$/,
         use: [
